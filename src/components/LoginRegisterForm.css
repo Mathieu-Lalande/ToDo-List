@@ -79,3 +79,40 @@
 .form-footer a:hover {
   text-decoration: underline;
 }
+
+/* Pour les écrans de petite taille jusqu'à 600px */
+@media screen and (max-width: 600px) {
+  .form-card {
+    max-width: 100%;
+    padding: 10px;
+  }
+  .form-group input {
+    font-size: 14px;
+  }
+  .form-btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+/* Pour les écrans de taille moyenne entre 601px et 900px */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .form-card {
+    max-width: 70%;
+  }
+}
+
+/* Pour les écrans de grande taille à partir de 901px */
+@media screen and (min-width: 901px) {
+  .form-card {
+    max-width: 500px;
+    padding: 20px;
+  }
+  .form-group input {
+    font-size: 16px;
+  }
+  .form-btn {
+    font-size: 20px;
+    padding: 15px;
+  }
+}
