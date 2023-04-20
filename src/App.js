@@ -1,51 +1,4 @@
-/*import React, { useState, useEffect } from "react";
-import Header from "./components/Header";
-import Form from "./components/Form";
-import TodosList from "./components/TodosList";
-import "./App.css";
-
-
-const App = () => {
-  const initialState = JSON.parse(localStorage.getItem("todos")) || [];
-  const [input, setInput] = useState ("");
-  const [todos, setTodos] = useState (initialState);
-  const [editTodo, setEditTodo] = useState(null);
-
-useEffect(() => {
-  localStorage.setItem("todos", JSON.stringify(todos));
-}, [todos]);
-
-  return (  
-    <div className='container'>
-      <div className='app-wrapper'>
-        <div>
-          <Header />
-        </div>
-        <div>
-        <Form
-          input={input}
-          setInput={setInput}
-          todos={todos}
-          setTodos={setTodos}
-          editTodo={editTodo}
-          setEditTodo={setEditTodo}
-        />
-        </div>
-      <div>
-        <TodosList
-          todos={todos}
-          setTodos={setTodos}
-          setEditTodo = {setEditTodo}
-        />
-      </div>
-    </div>
-  </div>);
-
-}
-*/
-
-
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Header from "./components/Header";
 import Form from "./components/Form";
 import TodosList from "./components/TodosList";
@@ -54,21 +7,19 @@ import Login from "./components/Login";
 import "./App.css";
 
 const App = () => {
-  //const initialState = JSON.parse(localStorage.getItem("todos")) || [];
+  //localStorage.clear();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState("");
   const [users, setUsers] = useState([]);
   const [input, setInput] = useState("");
-  //const [todos, setTodos] = useState(initialState);
   const [editTodo, setEditTodo] = useState(null);
 
-  const getUserTasks = () => {
+  const getUserTasks = useCallback(() => {
     const userTasks = JSON.parse(localStorage.getItem("usersTasks")) || {};
     return userTasks[currentUser] || [];
-  };
-  
-  const [todos, setTodos] = useState(getUserTasks());
-  
+  }, [currentUser]);
+
+  const [todos, setTodos] = useState(getUserTasks);
 
   useEffect(() => {
     const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
@@ -79,15 +30,17 @@ const App = () => {
     localStorage.setItem("users", JSON.stringify(users));
   }, [users]);
 
-  const updateUserTasks = (newTasks) => {
+  const updateUserTasks = useCallback((newTasks) => {
     const userTasks = JSON.parse(localStorage.getItem("usersTasks")) || {};
     userTasks[currentUser] = newTasks;
     localStorage.setItem("usersTasks", JSON.stringify(userTasks));
-  };
+  }, [currentUser]);
 
   useEffect(() => {
-    updateUserTasks(todos);
-  }, [todos]);
+    if (currentUser) {
+      updateUserTasks(todos);
+    }
+  }, [todos, updateUserTasks, currentUser]);
 
   const handleRegister = (username, password) => {
     const newUser = { username, password };
@@ -96,9 +49,8 @@ const App = () => {
     setIsLoggedIn(true);
     const userTasks = JSON.parse(localStorage.getItem("usersTasks")) || {};
     userTasks[username] = [];
-    localStorage.setItem("usersTasks", JSON.stringify(userTasks));
+    localStorage.setItem("usersTasks", JSON.stringify(userTasks)); 
   };
-  
 
   const handleLogin = (username, password) => {
     const user = users.find(
@@ -113,11 +65,11 @@ const App = () => {
       alert("Mauvais identifiants");
     }
   };
-  
 
   const handleLogout = () => {
     setCurrentUser("");
     setIsLoggedIn(false);
+    setTodos([]);
   };
 
   return (
@@ -164,4 +116,4 @@ const App = () => {
   );
 };
 
-export default App;
+  export default App;
