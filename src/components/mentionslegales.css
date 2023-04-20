@@ -1,0 +1,54 @@
+.button {
+  background-color: #43b929;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: all 0.2s ease-in-out;
+  margin-top: 15px;
+}
+
+.button:hover {
+  background-color: #43b929;
+}
+
+.mentions {
+  display: none;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: justify;
+  color: #ccc;
+}
+
+.show-mentions {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .mentions {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .mentions {
+    font-size: 10px;
+    padding: 5px;
+  }
+}

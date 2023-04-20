@@ -5,6 +5,7 @@ import TodosList from "./components/TodosList";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import "./App.css";
+import MentionsLegales from "./components/MentionsLegales";
 
 const App = () => {
   //localStorage.clear();
@@ -110,6 +111,9 @@ const App = () => {
               setEditTodo={setEditTodo}
             />
           )}
+        </div>
+        <div>
+        <MentionsLegales />
         </div>
       </div>
     </div>
