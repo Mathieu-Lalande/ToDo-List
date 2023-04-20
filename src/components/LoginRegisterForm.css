@@ -23,13 +23,16 @@
 
 .form-group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-bottom: 20px;
 }
 
 .form-group label {
   color: #ccc;
   margin-bottom: 10px;
+  flex: 1;
+  text-align: left;
+  margin-right: 3%
 }
 
 .form-group input {
@@ -40,7 +43,9 @@
   background-color: #ccc;
   border: none;
   border-radius: 5px;
+  flex: 2;
 }
+
 
 .form-group input:focus {
   background-color: #fff;
@@ -80,7 +85,62 @@
   text-decoration: underline;
 }
 
-/* Pour les écrans de petite taille jusqu'à 600px */
+.form-group-captcha {
+  display: flex;
+  align-items: center; /* aligner les éléments verticalement */
+  justify-content: space-between; /* aligner les éléments horizontalement */
+  margin-bottom: 20px;
+}
+
+.form-group-captcha label {
+  color: #ccc;
+  margin-bottom: 10px;
+  margin-right: 3%;
+}
+
+.form-group-captcha input {
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  color: #282c34;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  flex: 2;
+}
+
+.form-group-captcha input:focus {
+  background-color: #fff;
+}
+
+/* CSS code for captcha code and refresh button */
+.captcha-code {
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #43b929;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.captcha-refresh-btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #43b929;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.captcha-refresh-btn:hover {
+  background-color: #54d23c;
+}
+
+
+/* Écran avec une largeur maximale de 600 pixels */
 @media screen and (max-width: 600px) {
   .form-card {
     max-width: 100%;
@@ -93,16 +153,30 @@
     font-size: 16px;
     padding: 10px;
   }
+  .captcha-code {
+    font-size: 18px;
+  }
+  .captcha-refresh-btn {
+    font-size: 14px;
+    padding: 3px 5px;
+  }
 }
 
-/* Pour les écrans de taille moyenne entre 601px et 900px */
+/* Écran avec une largeur minimale de 601 pixels et une largeur maximale de 900 pixels */
 @media screen and (min-width: 601px) and (max-width: 900px) {
   .form-card {
     max-width: 70%;
   }
+  .captcha-code {
+    font-size: 24px;
+  }
+  .captcha-refresh-btn {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
 }
 
-/* Pour les écrans de grande taille à partir de 901px */
+/* Écran avec une largeur minimale de 901 pixels */
 @media screen and (min-width: 901px) {
   .form-card {
     max-width: 500px;
@@ -114,5 +188,12 @@
   .form-btn {
     font-size: 20px;
     padding: 15px;
+  }
+  .captcha-code {
+    font-size: 24px;
+  }
+  .captcha-refresh-btn {
+    font-size: 16px;
+    padding: 5px 10px;
   }
 }

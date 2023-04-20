@@ -14,7 +14,7 @@ const Login = ({ handleLogin }) => {
     <form onSubmit={handleSubmit} className="form-card"> 
       <h2>Login</h2>
       <div className="form-group">
-        <label htmlFor="username">User name:</label>
+        <label htmlFor="username">User name :</label>
         <input
           type="text"
           id="username"
