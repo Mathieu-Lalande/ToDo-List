@@ -21,7 +21,7 @@ const TodosList = ({todos, setTodos, setEditTodo}) => {
     };  
 
     if (!Array.isArray(todos)) {    
-        return <div>Pas de tâche pour le moment</div>
+        return <div>No task at the moment</div>
     }
 
     return (
