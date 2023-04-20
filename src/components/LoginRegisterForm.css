@@ -32,7 +32,7 @@
   margin-bottom: 10px;
   flex: 1;
   text-align: left;
-  margin-right: 3%
+  margin-right: 2%
 }
 
 .form-group input {
@@ -159,6 +159,9 @@
   .captcha-refresh-btn {
     font-size: 14px;
     padding: 3px 5px;
+  }
+  .form-group-captcha {
+    flex-direction: column;
   }
 }
 
