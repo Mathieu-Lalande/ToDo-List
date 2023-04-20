@@ -5,20 +5,20 @@ const Login = ({ handleLogin }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    handleLogin(username, password);
+  const handleSubmit = (event) => { // handle the submit of the form
+    event.preventDefault(); // prevent the default behavior of the form
+    handleLogin(username, password); // call the function handleLogin from App.js
   };
 
-  return (
-    <form onSubmit={handleSubmit} className="form-card">
+  return (  // display the form
+    <form onSubmit={handleSubmit} className="form-card"> 
       <h2>Login</h2>
       <div className="form-group">
         <label htmlFor="username">User name:</label>
         <input
           type="text"
           id="username"
-          value={username}
+          value={username} 
           onChange={(e) => setUsername(e.target.value)}
           required
           className="form-control"

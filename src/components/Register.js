@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import "./LoginRegisterForm.css";
 
-const Register = ({ handleRegister }) => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+const Register = ({ handleRegister }) => { // handleRegister is a function from App.js
+  const [username, setUsername] = useState(""); // useState is a hook from React
+  const [password, setPassword] = useState(""); 
+  const [confirmPassword, setConfirmPassword] = useState(""); 
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (password === confirmPassword) {
-      handleRegister(username, password);
+  const handleSubmit = (event) => { // handle the submit of the form
+    event.preventDefault(); // prevent the default behavior of the form
+    if (password === confirmPassword) { // check if the password and the confirmation are the same
+      handleRegister(username, password); // call the function handleRegister from App.js
     } else {
-      alert("Les mots de passe ne correspondent pas.");
+      alert("Les mots de passe ne correspondent pas."); // display an alert
     }
   };
 
-  return (
+  return ( // display the form
     <form onSubmit={handleSubmit} className="form-card">
       <h2>Registration</h2>
       <div className="form-group">
