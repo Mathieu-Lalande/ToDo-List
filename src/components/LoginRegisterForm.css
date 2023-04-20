@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-card {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #282c34;
+}
+
+.form-card > h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  color: #282c34;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-group input:focus {
+  background-color: #fff;
+}
+
+.form-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #43b929;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-btn:hover {
+  background-color: #54d23c;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-footer p {
+  color: #ccc;
+}
+
+.form-footer a {
+  color: #43b929;
+  text-decoration: none;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
