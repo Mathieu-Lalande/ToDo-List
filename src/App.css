@@ -32,7 +32,7 @@
 
 .task-input {
   outline: none;
-  width: 260px;
+  width: 538px;
   padding: 15px;
   margin-right: 25px;
   font-size: 20px;
@@ -146,7 +146,7 @@ button:focus {
   }
 
   .task-input {
-    width: 300px;
+    width: 538px;
     font-size: 24px;
   }
 
@@ -189,9 +189,10 @@ button:focus {
   }
 
   .button-add {
-    padding: 10px;
+    padding: 15px;
     font-size: 18px;
     width: 80px;
+    margin-left: 8%;
   }
 
   .list-item {

@@ -11,7 +11,7 @@ const MentionsLegales = () => {
   return (
     <div>
       <button className="button" onClick={toggleMentions}>
-        {isOpen ? "Hide legal notices" : "Show legal notices"}
+        {isOpen ? "Cacher les mentions légales" : "Voir les mentions légales"}
       </button>
       <p className={`mentions ${isOpen ? "show-mentions" : ""}`}>
         Ce site est destiné à un usage personnel et familial uniquement. Il a été créé dans le but de fournir une
