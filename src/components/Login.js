@@ -12,9 +12,9 @@ const Login = ({ handleLogin }) => {
 
   return (  // display the form
     <form onSubmit={handleSubmit} className="form-card"> 
-      <h2>Login</h2>
+      <h2>Connexion</h2>
       <div className="form-group">
-        <label htmlFor="username">User name :</label>
+        <label htmlFor="username">Prénom :</label>
         <input
           type="text"
           id="username"
@@ -25,7 +25,7 @@ const Login = ({ handleLogin }) => {
         />
       </div>
       <div className="form-group">
-        <label htmlFor="password">Password :</label>
+        <label htmlFor="password">Mot de Passe :</label>
         <input
           type="password"
           id="password"
@@ -35,7 +35,7 @@ const Login = ({ handleLogin }) => {
           className="form-control"
         />
       </div>
-      <button type="submit" className="form-btn">Log In</button>
+      <button type="submit" className="form-btn">Se connecter</button>
     </form>
   );
 };

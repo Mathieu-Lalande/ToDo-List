@@ -22,8 +22,6 @@
   min-height: 650px;
   padding: 20px;
   box-sizing: border-box;
-  border-radius: 10px;
-  box-shadow: 1px 3px 20px #282c34;
   margin-bottom: 10px;
 }
 
@@ -162,7 +160,7 @@ button:focus {
   }
 
   .list {
-    width: 300px;
+    width: 500px;
     font-size: 24px;
   }
 

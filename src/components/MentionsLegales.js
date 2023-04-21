@@ -32,18 +32,13 @@ const MentionsLegales = () => {
         autorisation préalable, est strictement interdite et constitue une contrefaçon susceptible d'engager la
         responsabilité civile et pénale de son auteur.
         <br/><br/>
+
         <h3>Protection des données personnelles</h3>
-       
-        Nous nous engageons à protéger les données personnelles de nos utilisateurs. Nous ne collectons que les
-        informations nécessaires au fonctionnement de l'application et nous ne les utilisons qu'à des fins
-        strictement internes. Conformément à la réglementation en vigueur, vous disposez d'un droit d'accès, de
-        rectification et de suppression des données vous concernant.
+
+        Nous sommes engagés dans la protection des données personnelles de nos utilisateurs. Nous collectons uniquement les informations nécessaires au fonctionnement de l'application et nous les utilisons uniquement à des fins strictement internes. Nous ne stockons pas les données sur nos serveurs, elles sont stockées localement sur l'appareil de l'utilisateur, ce qui signifie que nous n'avons pas accès à ces données. Conformément à la réglementation en vigueur, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Si vous souhaitez exercer l'un de ces droits, veuillez nous contacter par email à mathieu.lalandee@gmail.com.
         <br/><br/>
-        <h3>Cookies</h3>
-  
-        Nous utilisons des cookies pour améliorer l'expérience utilisateur sur notre site. Les cookies sont de petits
-        fichiers textes stockés sur votre ordinateur qui permettent de vous identifier lors de vos prochaines visites.
-        Vous pouvez les désactiver à tout moment dans les paramètres de votre navigateur.
+        <h3>Stockage local de données</h3>
+Nous utilisons un stockage local de données pour stocker les informations nécessaires au fonctionnement de l'application sur l'appareil de l'utilisateur. Cette méthode ne nécessite pas l'utilisation de cookies tiers. Vous pouvez supprimer ces données à tout moment en utilisant les paramètres de l'application ou en supprimant l'application de votre appareil. Si vous avez des questions concernant le stockage local de données, veuillez nous contacter par email à mathieu.lalandee@gmail.com.
         <br/><br/>
         <h3>Modification des mentions légales</h3>
       

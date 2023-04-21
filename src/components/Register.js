@@ -33,9 +33,9 @@ const Register = ({ handleRegister }) => {
 
   return (
     <form onSubmit={handleSubmit} className="form-card">
-      <h2>Registration</h2>
+      <h2>Inscription</h2>
       <div className="form-group">
-        <label htmlFor="username">User name :</label>
+        <label htmlFor="username">Prénom :</label>
         <input
           type="text"
           id="username"
@@ -46,7 +46,7 @@ const Register = ({ handleRegister }) => {
         />
       </div>
       <div className="form-group">
-        <label htmlFor="password">Password :</label>
+        <label htmlFor="password">Mot de Passe :</label>
         <input
           type="password"
           id="password"
@@ -57,7 +57,7 @@ const Register = ({ handleRegister }) => {
         />
       </div>
       <div className="form-group">
-        <label htmlFor="confirmPassword">Confirm password :</label>
+        <label htmlFor="confirmPassword">Confirme le MDP :</label>
         <input
           type="password"
           id="confirmPassword"
@@ -79,10 +79,10 @@ const Register = ({ handleRegister }) => {
         />
         <span className="captcha-code">{captcha}</span>
         <button type="button" className="captcha-refresh-btn" onClick={generateCaptcha}>
-          Refresh
+          Rafraîchir
         </button>
       </div>
-      <button type="submit" className="form-btn">Register</button>
+      <button type="submit" className="form-btn">Enregistrer</button>
     </form>
   );
 };
