@@ -6,6 +6,19 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Stylise la barre de défilement en vert */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4CAF50;
+}
+
 .container {
   background: #282c34;
   width: 100%;
