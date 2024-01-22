@@ -57,7 +57,7 @@
 
 .button-add {
   width: 115px;
-  padding: 15px 15px;
+  padding: 15px 0;
   font-size: 20px;
   border-radius: 10px;
   border: 0;
@@ -164,7 +164,6 @@ button:focus {
   }
 
   .button-add {
-    padding: 15px 20px;
     font-size: 24px;
   }
 
@@ -202,7 +201,6 @@ button:focus {
   }
 
   .button-add {
-    padding: 15px;
     font-size: 18px;
     width: 80px;
     margin-left: 8%;
