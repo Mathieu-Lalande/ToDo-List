@@ -202,8 +202,6 @@ button:focus {
 
   .button-add {
     font-size: 18px;
-    width: 80px;
-    margin-left: 8%;
   }
 
   .list-item {
@@ -240,9 +238,8 @@ button:focus {
   }
 
   .button-add {
-    padding: 12px;
+    padding: 16px 12px;
     font-size: 20px;
-    width: 100px;
   }
 
   .list-item {
